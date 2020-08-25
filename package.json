@@ -1,8 +1,10 @@
 {
   "name": "@endurance/behavior",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": "git://github.com/endurance/behavior.git",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
