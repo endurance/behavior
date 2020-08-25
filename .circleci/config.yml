@@ -44,7 +44,7 @@ jobs:
           command: echo "registry=https://npm.pkg.github.com/endurance" >> ~/repo/.npmrc
       - run:
           name: Authenticate with registry
-          command: echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > ~/repo/.npmrc
+          command: echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >> ~/repo/.npmrc
       - run:
           name: Publish package
           command: npm publish
