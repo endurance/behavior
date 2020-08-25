@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Run tests
           command: npm test
-
+      - run: npm run build
       - save_cache:
           paths:
             - node_modules
@@ -39,6 +39,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: Relate to local registry
+          command: echo "registry=https://npm.pkg.github.com/endurance" >> ~/repo/.npmrc
       - run:
           name: Authenticate with registry
           command: echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > ~/repo/.npmrc
