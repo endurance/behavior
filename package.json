@@ -14,20 +14,44 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/react-hooks": "^3.4.1",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.6.0",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
-    "typescript": "^4.0.2"
+    "jest": "^26.4.2",
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "react": ">=16.x",
     "react-dom": ">=16.x"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./jest.setup.ts"
+    ]
   }
 }
