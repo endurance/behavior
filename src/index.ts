@@ -24,9 +24,6 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     return this.state.props;
   }
   
-  // public get client() {
-  //     return this.state.client;
-  // }
   public get loading() {
     // @ts-ignore
     return this.viewState?.loading;
