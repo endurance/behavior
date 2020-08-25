@@ -1,6 +1,6 @@
 {
   "name": "@endurance/behavior",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "description": "Simple pattern for view state management in local components",
   "license": "MIT",
