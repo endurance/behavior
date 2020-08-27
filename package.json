@@ -11,9 +11,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "autobind-decorator": "^2.4.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "autobind-decorator": "^2.4.0"
   },
   "scripts": {
     "build": "tsc",
@@ -23,14 +21,16 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "@testing-library/react": "^10.4.9",
     "@testing-library/react-hooks": "^3.4.1",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.6.0",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
-    "jest": "^26.4.2",
     "react-test-renderer": "^16.13.1",
+    "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
