@@ -45,6 +45,7 @@ jobs:
           name: bump package version
           command: |
             git add .
+            git commit -m 'Pre-commit [ci skip]'
             npm version patch -m "Bumped version number to %s [ci skip]"
             git push origin master
             git push --tags
