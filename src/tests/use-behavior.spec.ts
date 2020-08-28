@@ -1,6 +1,6 @@
 import {renderHook, act} from '@testing-library/react-hooks'
-import { useSimpleBehavior } from '../simple-behavior';
-import { AppViewState } from '../../helper-types';
+import { useSimpleBehavior } from '../hooks/simple-behavior';
+import { AppViewState } from '../helper-types';
 
 describe('Test behavior hooks', () => {
   it('should be able to render and check hook', () => {
