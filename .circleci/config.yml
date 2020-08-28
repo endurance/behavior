@@ -34,6 +34,20 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  bump-version:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          command: git config --global user.email "jeidehen@gmail.com"
+      - run:
+          command: git config --global user.name "Endurancec Idhen"
+      - run:
+          name: bump package version
+          command: |
+            npm version patch -m "Bumped version number to %s [ci skip]"
+            git push origin master
+            git push --tags
   deploy:
     <<: *defaults
     steps:
@@ -53,15 +67,14 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - test:
-          filters:
-            tags:
-              only: /^v.*/
-      - deploy:
+      - test
+      - deploy-approval:
+          type: approval
           requires:
             - test
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      - bump-version:
+          requires:
+            - deploy-approval
+      - deploy:
+          requires:
+            - bump-version

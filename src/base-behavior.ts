@@ -17,6 +17,11 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     return this.viewState?.loading;
   }
   
+  /**
+   * Can set an individual key on Local State
+   * @param name
+   * @param value
+   */
   @boundMethod
   public setter(name: keyof ViewState, value: any) {
     this.state.setViewState((p: any) => {
@@ -25,6 +30,17 @@ export abstract class BaseBehavior<ViewState, Props = any> {
         [name]: value,
       };
     });
+  }
+  
+  /**
+   * Functional Setter
+   * @param name
+   */
+  @boundMethod
+  public setterFp(name: keyof ViewState) {
+    return (value: any) => {
+      this.setter(name, value);
+    }
   }
   
   @boundMethod
