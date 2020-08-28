@@ -14,13 +14,11 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: rm -rf .npmrc
       - run: npm install
       - run:
           name: Run tests
@@ -37,7 +35,8 @@ jobs:
   bump-version:
     <<: *defaults
     steps:
-      - checkout
+      - attach_workspace:
+          at: ~/repo
       - run:
           command: git config --global user.email "jeidehen@gmail.com"
       - run:
@@ -48,6 +47,9 @@ jobs:
             npm version patch -m "Bumped version number to %s [ci skip]"
             git push origin master
             git push --tags
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
   deploy:
     <<: *defaults
     steps:
