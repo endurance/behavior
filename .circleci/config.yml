@@ -41,7 +41,7 @@ jobs:
       - run:
           command: git config --global user.email "jeidehen@gmail.com"
       - run:
-          command: git config --global user.name "Endurancec Idhen"
+          command: git config --global user.name "Endurance Idhen"
       - run:
           name: bump package version
           command: |
@@ -67,14 +67,17 @@ workflows:
   version: 2
   test-deploy:
     jobs:
-      - test
+      - test:
+          context: General
       - deploy-approval:
           type: approval
           requires:
             - test
       - bump-version:
+          context: General
           requires:
             - deploy-approval
       - deploy:
+          context: General
           requires:
             - bump-version
