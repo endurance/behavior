@@ -28,15 +28,13 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       - persist_to_workspace:
           root: ~/repo
           paths: .
   bump-version:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/repo
+      - checkout
       - run:
           command: git config --global user.email "jeidehen@gmail.com"
       - run:
@@ -47,9 +45,6 @@ jobs:
             npm version patch -m "Bumped version number to %s [ci skip]"
             git push origin master
             git push --tags
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
   deploy:
     <<: *defaults
     steps:
