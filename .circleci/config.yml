@@ -40,7 +40,7 @@ jobs:
       - run:
           command: git config --global user.email "jeidehen@gmail.com"
       - run:
-          command: git config --global user.name "Endurance Idhen"
+          command: git config --global user.name "Endurance Idehen"
       - run:
           name: bump package version
           command: |
