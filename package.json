@@ -1,6 +1,6 @@
 {
   "name": "@endurance/behavior",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "private": false,
   "description": "Simple pattern for view state management in local components",
   "license": "MIT",
@@ -54,6 +54,6 @@
     "testEnvironment": "node"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
