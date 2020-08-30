@@ -1,5 +1,7 @@
 import { boundMethod } from 'autobind-decorator';
 import { ViewStateWrapper } from './helper-types';
+import cloneDeep from 'lodash.clonedeep';
+import lodashSet from 'lodash.set';
 
 export abstract class BaseBehavior<ViewState, Props = any> {
   constructor(protected readonly state: ViewStateWrapper<ViewState, Props>) {}
@@ -49,13 +51,13 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     this.setter(field, !currentValue);
   }
   
-  public eventSetter = (name: keyof ViewState) => (e: any) => {
-    this.state.setViewState((p: any) => {
-      return {
-        ...p,
-        [name]: e.target.value,
-      };
-    });
+  @boundMethod
+  public eventSetter<T>(propertyPath: string) {
+    return (e: any) => {
+      const initialState = cloneDeep(this.viewState) as unknown as object;
+      const newState = lodashSet(initialState, propertyPath, e.target.value);
+      this.state.setViewState(newState);
+    }
   };
   
   @boundMethod
