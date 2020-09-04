@@ -19,6 +19,12 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     return this.viewState?.loading;
   }
   
+  private _nestedSetter(propertyPath: string, value: any) {
+    const initialState = cloneDeep(this.viewState) as unknown as object;
+    const newState = lodashSet(initialState, propertyPath, value);
+    this.state.setViewState(newState);
+  }
+  
   /**
    * Can set an individual key on Local State
    * @param name
@@ -32,6 +38,11 @@ export abstract class BaseBehavior<ViewState, Props = any> {
         [name]: value,
       };
     });
+  }
+  
+  @boundMethod
+  public nestedSetter(propertyPath: string, value: any) {
+    this._nestedSetter(propertyPath, value);
   }
   
   /**
@@ -54,9 +65,7 @@ export abstract class BaseBehavior<ViewState, Props = any> {
   @boundMethod
   public eventSetter<T>(propertyPath: string) {
     return (e: any) => {
-      const initialState = cloneDeep(this.viewState) as unknown as object;
-      const newState = lodashSet(initialState, propertyPath, e.target.value);
-      this.state.setViewState(newState);
+      this._nestedSetter(propertyPath, e.target.value);
     }
   };
   
