@@ -2,7 +2,7 @@
   "name": "@endurance/behavior",
   "version": "1.1.14",
   "private": false,
-  "description": "Simple pattern for view state management in local components",
+  "description": "Simple pattern for view state management in local components in React JS",
   "license": "MIT",
   "files": [
     "dist"
