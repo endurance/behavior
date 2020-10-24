@@ -1,6 +1,6 @@
 {
-  "name": "@endurance/behavior",
-  "version": "1.1.15",
+  "name": "@enduranceidehen/behavior",
+  "version": "1.1.16",
   "private": false,
   "description": "Simple pattern for view state management in local components in React JS",
   "license": "MIT",
@@ -59,8 +59,5 @@
     },
     "coverageDirectory": "./coverage",
     "testEnvironment": "node"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }

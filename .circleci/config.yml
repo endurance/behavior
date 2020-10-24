@@ -45,20 +45,20 @@ jobs:
             npm version patch -m "Bumped version number to %s [ci skip]"
             git push origin master
             git push --tags
-  deploy:
+  deploy-npm-packages:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/repo
       - run:
-          name: Relate to local registry
-          command: echo "registry=https://npm.pkg.github.com/endurance" >> ~/repo/.npmrc
+          name: install cli login
+          command: npm install -g npm-cli-login
       - run:
-          name: Authenticate with registry
-          command: echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >> ~/repo/.npmrc
+          name: npm cli login
+          command: npm-cli-login
       - run:
           name: Publish package
-          command: npm publish
+          command: npm publish --access public
 
 workflows:
   version: 2
@@ -74,7 +74,7 @@ workflows:
           context: General
           requires:
             - deploy-approval
-      - deploy:
+      - deploy-npm-packages:
           context: General
           requires:
             - bump-version
