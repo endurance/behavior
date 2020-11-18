@@ -18,10 +18,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/endurance/behavior">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Simple React Behavior Pattern</h3>
 
   <p align="center">
@@ -127,15 +123,15 @@ Project Link: [https://github.com/endurance/behavior](https://github.com/enduran
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/endurance/repo.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/endurance/behavior.svg?style=flat-square
 [contributors-url]: https://github.com/endurance/behavior/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/endurance/repo.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/endurance/behavior.svg?style=flat-square
 [forks-url]: https://github.com/endurance/behavior/network/members
-[stars-shield]: https://img.shields.io/github/stars/endurance/repo.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/endurance/behavior.svg?style=flat-square
 [stars-url]: https://github.com/endurance/behavior/stargazers
-[issues-shield]: https://img.shields.io/github/issues/endurance/repo.svg?style=flat-square
-[issues-url]: https://github.com/endurance/repo/issues
-[license-shield]: https://img.shields.io/github/license/endurance/repo.svg?style=flat-square
-[license-url]: https://github.com/endurance/repo/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/endurance/behavior.svg?style=flat-square
+[issues-url]: https://github.com/endurance/behavior/issues
+[license-shield]: https://img.shields.io/github/license/endurance/behavior.svg?style=flat-square
+[license-url]: https://github.com/endurance/behavior/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/endurance-idehen-63a48338/
