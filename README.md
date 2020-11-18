@@ -128,11 +128,11 @@ Project Link: [https://github.com/endurance/behavior](https://github.com/enduran
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/endurance/repo.svg?style=flat-square
-[contributors-url]: https://github.com/endurance/repo/graphs/contributors
+[contributors-url]: https://github.com/endurance/behavior/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/endurance/repo.svg?style=flat-square
-[forks-url]: https://github.com/endurance/repo/network/members
+[forks-url]: https://github.com/endurance/behavior/network/members
 [stars-shield]: https://img.shields.io/github/stars/endurance/repo.svg?style=flat-square
-[stars-url]: https://github.com/endurance/repo/stargazers
+[stars-url]: https://github.com/endurance/behavior/stargazers
 [issues-shield]: https://img.shields.io/github/issues/endurance/repo.svg?style=flat-square
 [issues-url]: https://github.com/endurance/repo/issues
 [license-shield]: https://img.shields.io/github/license/endurance/repo.svg?style=flat-square
