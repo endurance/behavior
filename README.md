@@ -1,19 +1,3 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** endurance, behavior, @endurance, jeidehen@gmail.com
--->
-
-
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -76,20 +60,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This repository is dedicated to resolving some of the issues I've seen in my time writing thousands of React components, both alone and on teams.
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`endurance`, `behavior`, `@endurance`, `jeidehen@gmail.com`
+In particular, I've noticed that many engineers struggle with separation of concerns on the frontend, or even decide that all logic - complicated or otherwise - belongs in the Component itself.
+
+The examples and patterning in this repository is an attempt to bring simple code separation into the React community.
 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
-
+* [React]()
+* [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns#:~:text=In%20computer%20science%2C%20separation%20of,code%20of%20a%20computer%20program.)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -101,7 +82,7 @@ To get a local copy up and running follow these simple steps.
 This is an example of how to list things you need to use the software and how to install them.
 * npm
 ```sh
-npm install npm@latest -g
+npm i @enduranceidehen/behavior
 ```
 
 ### Installation
