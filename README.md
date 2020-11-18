@@ -77,34 +77,16 @@ The examples and patterning in this repository is an attempt to bring simple cod
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+### Installation
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
 ```sh
 npm i @enduranceidehen/behavior
 ```
 
-### Installation
-
-1. Clone the repo
-```sh
-git clone https://github.com/endurance/behavior.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
-
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://github.com/endurance/behavior/tree/master/src/examples)_
-
+_Please refer to the [Documentation](https://github.com/endurance/behavior/tree/master/src/examples)_
 
 
 <!-- ROADMAP -->
@@ -156,5 +138,4 @@ Project Link: [https://github.com/endurance/behavior](https://github.com/enduran
 [license-shield]: https://img.shields.io/github/license/endurance/repo.svg?style=flat-square
 [license-url]: https://github.com/endurance/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/endurance
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/in/endurance-idehen-63a48338/
