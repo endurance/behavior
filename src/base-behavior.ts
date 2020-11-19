@@ -40,13 +40,18 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     });
   }
   
+  /**
+   * Set a field nested in a state object.
+   * @param propertyPath
+   * @param value
+   */
   @boundMethod
   public nestedSetter(propertyPath: string, value: any) {
     this._nestedSetter(propertyPath, value);
   }
   
   /**
-   * Functional Setter
+   * Curried Functional Setter for the use cases where you want a function back rather than to run it immediately.
    * @param name
    */
   @boundMethod
@@ -56,12 +61,21 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     }
   }
   
+  /**
+   * Toggle a state field from True -> False or vice versa.
+   * @param field
+   */
   @boundMethod
   public toggle(field: keyof ViewState) {
     const currentValue = this.viewState[field];
     this.setter(field, !currentValue);
   }
   
+  /**
+   * Set state based off an event. This is a very common line of code found all over the place
+   * in React applications. It would be nice to just reuse instead of redo.
+   * @param propertyPath
+   */
   @boundMethod
   public eventSetter<T>(propertyPath: string) {
     return (e: any) => {
@@ -69,6 +83,11 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     }
   };
   
+  
+  /**
+   * Set multiple keys on the state the Behavior is intending to manage.
+   * @param change
+   */
   @boundMethod
   public setMultiple(change: Partial<Record<keyof ViewState, any>>) {
     this.state.setViewState((p: any) => {
@@ -79,6 +98,15 @@ export abstract class BaseBehavior<ViewState, Props = any> {
     });
   }
   
+  /**
+   * This function is for handling the use case where you want to set some state initially, do an action,
+   * and then unset some state.
+   *
+   * E.X. Say you want to load some data. It's nice to be able to set some "loading" state to TRUE,
+   * perform your loadData action, and then set you "loading" state to FALSE when done.
+   * @param cb: Callback to run
+   * @param actionsToManage: State to set to true
+   */
   @boundMethod
   public async handleUserAction(cb: Function, actionsToManage?: Array<keyof ViewState>) {
     const setValue = (b: boolean) =>
