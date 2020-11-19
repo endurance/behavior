@@ -19,11 +19,17 @@ class LocalBehavior extends BaseBehavior<any> {
   }
 }
 
-export const PrintTheCoolestPokemon = (props: object) => {
+// useEffect
+export const PrintTheCoolestPokemonUseEffect = (props: object) => {
   const b = useBehavior(props, LocalBehavior, new LocalState());
-  // useMount to run once
-  // useMount(() => b.loadDataForComponent())
-  // Or just write the useEffect to run it once
   useEffect(() => { b.loadDataForComponent() }, []);
+  return <div>{b.viewState.pokemonName}</div>;
+};
+
+
+// useMount version
+export const PrintTheCoolestPokemonUseMount = (props: object) => {
+  const b = useBehavior(props, LocalBehavior, new LocalState());
+  useMount(() => b.loadDataForComponent())
   return <div>{b.viewState.pokemonName}</div>;
 };

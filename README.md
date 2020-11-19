@@ -21,7 +21,7 @@
   <h3 align="center">Simple React Behavior Pattern</h3>
 
   <p align="center">
-    A way of simpliying frontend logic
+    A way of simplifying frontend logic
     <br />
     <a href="https://github.com/endurance/behavior"><strong>Explore the docs »</strong></a>
     <br />
@@ -84,6 +84,16 @@ npm i @enduranceidehen/behavior
 
 _Please refer to the [Documentation](https://github.com/endurance/behavior/tree/master/src/examples)_
 
+## Tips
+
+1. Don't extend or inherit from behaviors. 
+- Problem: Creating an inheritance hierachy can come with a whole host of complexity problems.
+- Try this: Consider Behaviors as place to separate view code (which can live in the React Component)
+from logic, which the Behavior exists to encapsulate.
+- If you have common functionality that you want to reuse, turn that functionality into a separate function that you
+reuse in the behavior in service to the component.
+
+2. Make your behaviors _as simple as you can possibly make it_
 
 <!-- ROADMAP -->
 ## Roadmap
